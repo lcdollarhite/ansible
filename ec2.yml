@@ -5,10 +5,10 @@
   vars:
     keypair: ansible
     instance_type: t2.micro
-    security_group: sg-ba9a5ede
+    security_group: sg-d673478f
     image: ami-f95ef58a
-    region: eu-west-1
-    subnet: subnet-7a522c0d
+    region: us-east-1
+    subnet: subnet-0dd5c547
     groupname: webservers
   tasks:
     - name: Launch instance
