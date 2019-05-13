@@ -1,4 +1,4 @@
-- name: Create a new instane
+- name: Create a new instance
   hosts: localhost
   connection: local
   gather_facts: False
