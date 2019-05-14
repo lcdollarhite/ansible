@@ -3,7 +3,7 @@
   connection: local
   gather_facts: False
   vars:
-    keypair: ansible
+    keypair: foo
     instance_type: t2.micro
     security_group: sg-d673478f
     image: ami-0080e4c5bc078760e
@@ -31,6 +31,6 @@
 - name: configure new instance
   hosts: webservers
   sudo: yes 
-  remote_user: ubuntu 
+  remote_user: ec2-user
   gather_facts: True
 - include: nginx-ec2.yml

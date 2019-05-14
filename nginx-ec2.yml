@@ -1,7 +1,7 @@
 ---
 - hosts: webservers
   sudo: yes 
-  remote_user: ubuntu 
+  remote_user: ec2-user
   vars:
     user: www-data
     worker_processes: 2
@@ -9,7 +9,7 @@
     worker_connections: 768
   tasks:
   - name: install nginx
-    apt: name=nginx state=latest update_cache=yes
+    yum: name=nginx state=latest update_cache=yes
   - name: ensure nginx is running (and enable it at boot)
     service: name=nginx state=started enabled=yes
   - name: write the nginx config file
